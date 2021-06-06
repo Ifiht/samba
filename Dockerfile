@@ -26,6 +26,8 @@ RUN apk --no-cache --no-progress upgrade && \
     echo '   force user = smbuser' >>$file && \
     echo '   force group = smb' >>$file && \
     echo '   follow symlinks = yes' >>$file && \
+    echo '   wide links = yes' >>$file && \
+    echo '   unix extensions = no' >>$file && \
     echo '   load printers = no' >>$file && \
     echo '   printing = bsd' >>$file && \
     echo '   printcap name = /dev/null' >>$file && \
@@ -52,6 +54,7 @@ RUN apk --no-cache --no-progress upgrade && \
     echo '   fruit:time machine = yes' >>$file && \
     echo '   fruit:veto_appledouble = no' >>$file && \
     echo '   fruit:wipe_intentionally_left_blank_rfork = yes' >>$file && \
+
     echo '' >>$file && \
     rm -rf /tmp/*
 
